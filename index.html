@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Redirecting to Amazon Lite...</title>
+
+    <style>
+
+      html {
+
+        margin: 0px 0px 0px 0px;
+        padding: 0px 0px 0px 0px;
+
+      }
+
+      body {
+
+        background-color: black;
+        color: white;
+
+        font-family: Arial, Helvetica, sans-serif;
+
+        margin: 0px 0px 0px 0px;
+        padding: 0px 0px 0px 0px;
+
+      }
+
+      div {
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        font-size: 24px;
+
+        margin: 0px 0px 0px 0px;
+        padding: 0px 0px 0px 0px;
+
+        width: 100vw;
+        height: 100vh;
+
+      }
+      
+
+    </style>
+
+  </head>
+  <body>
+
+    <div>
+
+      <p class="messageToVisitor">Redirecting to Amazon Lite</p>
+
+    </div>
+
+    <script>
+
+      setInterval(() => {
+
+        document.querySelector('.messageToVisitor').innerHTML += '.';
+
+      }, 1000);
+
+      setTimeout(() => {
+
+        location.href = 'home-page.html';
+
+      }, 3000);
+
+    </script>
+    
+  </body>
+</html>
