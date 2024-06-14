@@ -372,6 +372,8 @@ let products = [
 
 let cart = [];
 
+let timeoutID;
+
 showResult(products);
 
 searchBoxElement.addEventListener('keydown', (event) => {
@@ -495,7 +497,9 @@ function showResult(products) {
 
       tempAddIconElement.classList.remove('hide-if-not-added');
       tempAddTextElement.classList.remove('hide-if-not-added');
-      setTimeout(() => {
+      
+      clearTimeout(timeoutID);
+      timeoutID = setTimeout(() => {
         tempAddIconElement.classList.add('hide-if-not-added');
         tempAddTextElement.classList.add('hide-if-not-added');
       },2000);
