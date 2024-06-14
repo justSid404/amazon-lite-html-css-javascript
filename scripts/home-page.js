@@ -458,6 +458,8 @@ function showResult(products) {
   
     let tempColorBtnElements = document.querySelectorAll(`[class*="product-${index}-color-variant"]`);
     let tempSizeBtnElements = document.querySelectorAll(`[class*="product-${index}-size-variant"]`);
+    let tempAddIconElement = document.querySelector(`.addedIcon-${index}`);
+    let tempAddTextElement = document.querySelector(`.addedText-${index}`);
   
     tempAddToCartBtnElement.addEventListener('click', () => {
   
@@ -490,6 +492,13 @@ function showResult(products) {
         size : selectedSize,
         quantity : tempQuantityBtnElement.value
       });
+
+      tempAddIconElement.classList.remove('hide-if-not-added');
+      tempAddTextElement.classList.remove('hide-if-not-added');
+      setTimeout(() => {
+        tempAddIconElement.classList.add('hide-if-not-added');
+        tempAddTextElement.classList.add('hide-if-not-added');
+      },2000);
   
       let cartItemCount = 0;
       
@@ -705,6 +714,10 @@ function addProductHTML(product, index) {
     }
 
     productListingHtml += `
+
+    <div class = 'addedMessage'>
+      <img class = 'addedIcon-${index}  hide-if-not-added' style = 'margin : 0px 4px 0px 0px' src="images/checkmark.png" alt="✓"><p class = 'addedText-${index}  hide-if-not-added'>Added</p>
+    </div>
 
     <button class="add-to-cart add-to-cart-product-${index}" value = "product-${index}">
       Add to Cart
