@@ -28,6 +28,20 @@ p {
 
 }
 
+a {
+
+  color: inherit;
+  text-decoration: none;
+
+}
+
+a:active {
+
+  color: inherit;
+  text-decoration: none;
+
+}
+
 .css-header {
 
   display: flex;
@@ -51,6 +65,10 @@ p {
 
 .css-header-section-1 {
 
+  display: flex;
+
+  align-items: center;
+
   padding: 1.50vh 1.05vw 1.05vh 1.05vw;
 
   width: 16.66vw
@@ -58,13 +76,28 @@ p {
 }
 
 .css-logo {
+
   height: 100%;
+
+  padding: 6px;
+
+  cursor: pointer;
+
+}
+
+.css-logo:hover {
+
+  outline: solid 1px white;
+  border-radius: 2px;
+
 }
 
 .css-header-section-2 {
 
   display: flex;
   flex-direction: row;
+
+  justify-content: center;
 
   flex: 1;
 
@@ -73,8 +106,6 @@ p {
 }
 
 .css-searchbox {
-
-  flex: 1;
   
   font-size: 14px;
 
@@ -82,6 +113,8 @@ p {
   border-radius: 4px 0px 0px 4px;
 
   padding: 0px 0px 0px 12px;
+
+  width: 42.66vw;
 
 }
 
@@ -104,6 +137,7 @@ p {
   flex-direction: row;
 
   justify-content: right;
+  align-items: center;
 
   padding: 1.50vh 1.05vw 1.50vh 1.05vw;
 
@@ -113,8 +147,27 @@ p {
 
 .returnsAndOrders {
 
-  padding: 0px 1.05vw 0px 0px;
+  padding: 6px;
   margin: 0px 0px 0px 0px;
+
+  cursor: pointer;
+
+}
+
+.returnsAndOrders:hover {
+
+  outline: solid 1px white;
+  border-radius: 2px;
+
+}
+
+.css-cart-a {
+
+  display: flex;
+  flex-direction: row;
+  vertical-align: bottom;
+  
+  height: 100%;
 
 }
 
@@ -125,6 +178,17 @@ p {
   vertical-align: bottom;
   
   height: 100%;
+  
+  padding: 8px;
+
+  cursor: pointer;
+
+}
+
+.css-cart:hover {
+
+  outline: solid 1px white;
+  border-radius: 2px;
 
 }
 
@@ -142,7 +206,7 @@ p {
 
   position: fixed;
   top: 10px;
-  right: 65px;
+  right: 73px;
 
   color: orange;
   font-weight: bold;
@@ -153,7 +217,7 @@ p {
 
   position: fixed;
   top: 10px;
-  right: 60px;
+  right: 68px;
 
   color: orange;
   font-weight: bold;
