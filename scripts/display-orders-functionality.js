@@ -130,9 +130,9 @@ function addProductHTML_OrderPage() {
         
                     </div>
         
-                    <div class="track-button-div">
+                    <div class="track-package-div">
         
-                      <button>
+                      <button class = 'track-package-button-${placedOrderIndex}-${placedOrdersIndex} track-package-button'>
                         Track package
                       </button>
         

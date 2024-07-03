@@ -144,6 +144,12 @@ body {
 
 }
 
+.buy-again:hover {
+
+  background-color: rgb(236, 193, 0);
+
+}
+
 .buy-again img{
 
   margin: 0px 12px 0px 0px;
@@ -154,15 +160,13 @@ body {
 
 }
 
-.track-button-div {
+.track-package-div {
 
   width: 220px;
 
-  cursor: pointer;
-
 }
 
-.track-button-div button {
+.track-package-button {
 
   background-color: white;
 
@@ -177,6 +181,12 @@ body {
   width: 100%;
 
   cursor: pointer;
+
+}
+
+.track-package-button:hover {
+
+  background-color: rgb(241, 241, 241);
 
 }
 
