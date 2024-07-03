@@ -1,31 +1,4 @@
-if(localStorage.getItem('cartLS') !== null) {
-  
-  cart = JSON.parse(localStorage.getItem('cartLS'));
-
-  let cartItemCount = 0;
-      
-  cart.forEach((product, prodIndex) => {
-
-    if(product.quantity > 0) {
-
-      cartItemCount += parseInt(product.quantity);
-
-    }
-  });
-  
-  if(cartItemCount <= 9) {
-  
-    cartItemCountElement.innerHTML = cartItemCount;
-
-  } else {
-
-    cartItemCountElement.innerHTML = '9+';
-    cartItemCountElement.classList.add('cartItemCountMoreThan9');
-
-  }
-
-
-}
+cartItemCountElement.innerHTML = cart.length;
 
 searchBoxElement.addEventListener('keydown', (event) => {
 
@@ -44,7 +17,9 @@ searchButtonElement.addEventListener('click', () => {
 amazonLogo.addEventListener('click', () => {
 
   cart = [];
+  placedOrders = [];
   localStorage.removeItem('cartLS');
+  localStorage.removeItem('placedOrdersLS');
   
 });
 

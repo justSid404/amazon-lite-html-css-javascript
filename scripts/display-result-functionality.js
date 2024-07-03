@@ -1,4 +1,6 @@
 showResult_HomePage(products);
+    
+console.log(cart);
 
 function showResult_HomePage(products) {
 
@@ -78,27 +80,52 @@ function showResult_HomePage(products) {
         }
   
       });
+
+      if(cart.length > 0) {
+
+        for(let cartIndex = 0; cartIndex < cart.length; cartIndex++) {
+
+          if(cart[cartIndex].name === product.name) {
+
+            cart[cartIndex].quantity = parseInt(cart[cartIndex].quantity, 10) + parseInt(tempQuantityBtnElement.value, 10);
+            break;
+
+          } else {
+
+            cart.push({
+              name : product.name,
+              image : tempProductImageElement.getAttribute('src'),
+              color : selectedColor,
+              size : selectedSize,
+              quantity : tempQuantityBtnElement.value,
+              price : product.price,
+              orderPlacedOn : new Date().toISOString().slice(0, 10),
+              deliveryType : 0,
+              deliveryCost : 0
+            });
+            break;
+
+          }
+
+        }
+
+      } else {
     
-      console.log({
-        name : product.name,
-        image : tempProductImageElement.getAttribute('src'),
-        color : selectedColor,
-        size : selectedSize,
-        quantity : tempQuantityBtnElement.value,
-        // price : (product.price/100).toFixed(2),
-        price : product.price,
-        orderPlacedOn : new Date().toISOString().slice(0, 10)
-      });
+        cart.push({
+          name : product.name,
+          image : tempProductImageElement.getAttribute('src'),
+          color : selectedColor,
+          size : selectedSize,
+          quantity : tempQuantityBtnElement.value,
+          price : product.price,
+          orderPlacedOn : new Date().toISOString().slice(0, 10),
+          deliveryType : 0,
+          deliveryCost : 0
+        });
+
+      }
     
-      cart.push({
-        name : product.name,
-        image : tempProductImageElement.getAttribute('src'),
-        color : selectedColor,
-        size : selectedSize,
-        quantity : tempQuantityBtnElement.value,
-        price : product.price,
-        orderPlacedOn : new Date().toISOString().slice(0, 10)
-      });
+      console.log(cart);
 
       localStorage.setItem('cartLS', JSON.stringify(cart));
 
@@ -115,11 +142,14 @@ function showResult_HomePage(products) {
       
       cart.forEach((product, prodIndex) => {
   
-        if(product.quantity > 0) {
+        // if(product.quantity > 0) {
   
-          cartItemCount += parseInt(product.quantity);
+        //   cartItemCount += parseInt(product.quantity);
   
-        }
+        // }
+
+        cartItemCount++;
+
       });
   
       if(cartItemCount <= 9) {

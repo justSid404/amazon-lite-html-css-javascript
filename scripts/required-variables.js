@@ -1,9 +1,15 @@
 const productListingElement = document.querySelector('.css-product-listing');
+const ordersSectionElement = document.querySelector('.css-orders-section');
 const ordersListElement = document.querySelector('.css-order-list');
+const orderPlacedElement = document.querySelector('.order-placed-date');
 const orderTotalPriceElement = document.querySelector('.order-total');
 const searchBoxElement = document.querySelector('.css-searchbox');
 const searchButtonElement = document.querySelector('.css-searchbutton');
 const cartItemCountElement = document.querySelector('.cartItemCount');
+const checkoutItemCountElement = document.querySelector('.checkout-checkout-count');
+const checkoutListElement = document.querySelector('.checkout-list');
+const checkoutSummary = document.querySelector('.checkout-summary');
+const checkoutPlaceOrderButtonElement = document.querySelector('.checkout-place-order-button');
 
 const amazonLogo = document.querySelector('.css-logo');
 
@@ -375,4 +381,78 @@ let products = [
 ];
 
 let cart = [];
+let placedOrders = [];
 let timeoutID;
+
+try {
+
+  if(localStorage.getItem('placedOrdersLS') !== null) {
+    
+    placedOrders = JSON.parse(localStorage.getItem('placedOrdersLS'));
+  
+    // let placedOrdersItemCount = 0;
+        
+    // placedOrders.forEach((product, prodIndex) => {
+  
+    //   if(product.quantity > 0) {
+  
+    //     placedOrdersItemCount += parseInt(product.quantity);
+  
+    //   }
+    // });
+    
+    // if(placedOrdersItemCount <= 9) {
+    
+    //   placedOrdersItemCountElement.innerHTML = placedOrdersItemCount;
+  
+    // } else {
+  
+    //   placedOrdersItemCountElement.innerHTML = '9+';
+    //   placedOrdersItemCountElement.classList.add('placedOrdersItemCountMoreThan9');
+  
+    // }
+  
+  
+  }
+
+} catch(exception) {
+  //No order placed
+}
+
+try {
+
+  if(localStorage.getItem('cartLS') !== null) {
+    
+    cart = JSON.parse(localStorage.getItem('cartLS'));
+  
+    let cartItemCount = 0;
+        
+    cart.forEach((product, prodIndex) => {
+
+      // if(product.quantity > 0) {
+
+      //   cartItemCount += parseInt(product.quantity);
+
+      // }
+
+      cartItemCount++;
+      
+    });
+    
+    if(cartItemCount <= 9) {
+    
+      cartItemCountElement.innerHTML = cartItemCount;
+  
+    } else {
+  
+      cartItemCountElement.innerHTML = '9+';
+      cartItemCountElement.classList.add('cartItemCountMoreThan9');
+  
+    }
+  
+  
+  }
+
+} catch(exception) {
+  //No order in cart
+}
