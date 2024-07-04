@@ -2,7 +2,8 @@ body {
 
   font-family: Roboto;
 
-  padding: 20px 0px 0px 410px;
+  padding: 2.11vh 0px 0px 21.35vw;
+  /* padding: 20px 0px 0px 410px; */
   margin: 0px 0px 0px 0px;
 
 }
@@ -19,7 +20,8 @@ p {
   display: flex;
   flex-direction: row;
 
-  padding: 0px 0px 90px 0px;
+  padding: 0px 0px 9.52vh 0px;
+  /* padding: 0px 0px 90px 0px; */
   margin: 0px 0px 0px 0px;
 
 }
@@ -34,9 +36,10 @@ p {
 .checkout-logo {
 
   padding: 0px 0px 0px 0px;
-  margin: 0px 350px 0px 0px;
+  margin: 0px 18.22vw 0px 0px;
+  /* margin: 0px 350px 0px 0px; */
 
-  height: 30px;
+  height: 3.17vh;
 
 }
 
@@ -51,7 +54,8 @@ p {
   font-weight: bold;
   font-size: 22px;
 
-  margin: 0px 0px 18px 0px;
+  margin: 0px 0px 1.90vh 0px;
+  /* margin: 0px 0px 18px 0px; */
 
 }
 
@@ -65,7 +69,8 @@ p {
 .checkout-list {
 
   padding: 0px 0px 0px 0px;
-  margin: 0px 12px 0px 0px;
+  margin: 0px 0.62vw 0px 0px;
+  /* margin: 0px 12px 0px 0px; */
 
 }
 
@@ -77,10 +82,13 @@ p {
   border: solid 1px rgb(221, 221, 221);
   border-radius: 4px;
 
-  padding: 23px 0px 18px 18px;
-  margin: 0px 0px 12px 0px;
+  padding: 2.43vh 0px 1.90vh 0.93vw;
+  margin: 0px 0px 0.67vh 0px;
+  /* padding: 23px 0px 18px 18px;
+  margin: 0px 0px 12px 0px; */
 
-  width: 718px;
+  width: 37.39vw;
+  /* width: 718px; */
 
 }
 
@@ -92,7 +100,8 @@ p {
   font-weight: bold;
 
   padding: 0px 0px 0px 0px;
-  margin: 0px 0px 22px 0px;
+  margin: 0px 0px 2.32vh 0px;
+  /* margin: 0px 0px 22px 0px; */
 
 }
 
@@ -113,10 +122,11 @@ p {
   object-fit: fill;
 
   padding: 0px 0px 0px 0px;
-  margin: 0px 25px 0px 0px;
+  margin: 0px 1.30vw 0px 0px;
+  /* margin: 0px 25px 0px 0px; */
 
-  width: 100px;
-  height: 100px;
+  width: 5.20vw;
+  height: 10.58vh;
 
 }
 
@@ -126,9 +136,10 @@ p {
   flex-direction: column;
 
   padding: 0px 0px 0px 0px;
-  margin: 0px 24px 0px 0px;
+  margin: 0px 1.25vw 0px 0px;
+  /* margin: 0px 24px 0px 0px; */
 
-  width: 275px;
+  width: 14.32vw;
 
 }
 
@@ -137,7 +148,8 @@ p {
   font-weight: bold;
 
   padding: 0px 0px 0px 0px;
-  margin: 0px 0px 8px 0px;
+  margin: 0px 0px 0.84vh 0px;
+  /* margin: 0px 0px 8px 0px; */
 
 }
 
@@ -147,7 +159,8 @@ p {
   font-weight: bold;
 
   padding: 0px 0px 0px 0px;
-  margin: 0px 0px 5px 0px;
+  margin: 0px 0px 0.52vh 0px;
+  /* margin: 0px 0px 5px 0px; */
 
 }
 
@@ -167,7 +180,8 @@ p {
   flex-direction: row;
 
   padding: 0px 0px 0px 0px;
-  margin: 0px 0px 12px 0px;
+  margin: 0px 0px 1.26vh 0px;
+  /* margin: 0px 0px 12px 0px; */
 
 }
 
@@ -183,7 +197,8 @@ p {
 
   color: rgb(0, 105, 190);
 
-  margin: 0px 0px 0px 3px;
+  margin: 0px 0px 0px 0.15vw;
+  /* margin: 0px 0px 0px 3px; */
 
   cursor: pointer;
 
@@ -194,19 +209,24 @@ p {
   font-family: Roboto;
   font-size: 16px;
 
-  width: 50px;
-  height: 19px;
+  width: 2.60vw;
+  height: 2.01vh;
+  /* width: 50px;
+  height: 19px; */
   outline: none;
 
 }
 
 .checkout-product-delivery-option input {
 
-  width: 19px;
-  height: 19px;
+  width: 0.98vw;
+  height: 2.01vh;
+  /* width: 19px;
+  height: 19px; */
 
   padding: 0px 0px 0px 0px;
-  margin: 2px 5px 0px 1px;
+  margin: 0.21vh 0.26vw 0px 0.05vw;
+  /* margin: 2px 5px 0px 1px; */
 
 }
 
@@ -218,10 +238,12 @@ p {
   border: solid 1px rgb(221, 221, 221);
   border-radius: 4px;
 
-  padding: 18px 18px 18px 18px;
+  padding: 1.90vh 0.93vw 1.90vh 0.93vw;
+  /* padding: 18px 18px 18px 18px; */
   margin: 0px 0px 0px 0px;
 
-  width: 312px;
+  width: 16.25vw;
+  /* width: 312px; */
 
 }
 
@@ -234,7 +256,8 @@ p {
   font-size: 18px;
 
   padding: 0px 0px 0px 0px;
-  margin: 0px 0px 12px 0px;
+  margin: 0px 0px 1.26vh 0px;
+  /* margin: 0px 0px 12px 0px; */
 
 }
 
@@ -248,7 +271,8 @@ p {
   font-size: 15px;
 
   padding: 0px 0px 0px 0px;
-  margin: 0px 0px 9px 0px;
+  margin: 0px 0px 1.05vh 0px;
+  /* margin: 0px 0px 9px 0px; */
 
 }
 
@@ -262,7 +286,8 @@ p {
 .checkout-summary-total-before-tax .cost {
 
   border-top: solid 1px rgb(221, 221, 221);
-  padding: 9px 0px 0px 0px;
+  padding: 1.05vh 0px 0px 0px;
+  /* padding: 9px 0px 0px 0px; */
   
 }
 
@@ -274,7 +299,8 @@ p {
 
   border-top: solid 1px rgb(221, 221, 221);
 
-  padding: 19px 0px 10px 0px;
+  padding: 2.01vh 0px 1.05vh 0px;
+  /* padding: 19px 0px 10px 0px; */
 
 }
 
@@ -285,16 +311,21 @@ p {
 
   font-size: 16px;
 
-  margin: 0px 0px 20px 0px;
+  margin: 0px 0px 2.11vh 0px;
+  /* margin: 0px 0px 20px 0px; */
 
 }
 
 .checkout-summary-use-paypal input {
 
-  margin: 0px 0px 0px 10px;
+  margin: 0px 0px 0px 0.52vw;
+  /* margin: 0px 0px 0px 10px; */
 
-  width: 20px;
-  height: 20px;
+  width: 1.04vw;
+  height: 2.11vh;
+
+  /* width: 20px;
+  height: 20px; */
 
 }
 
@@ -311,7 +342,8 @@ p {
   border: none;
   border-radius: 8px;
 
-  padding: 14px 0px 14px 0px;
+  padding: 1.48vh 0px 1.48vh 0px;
+  /* padding: 14px 0px 14px 0px; */
 
   cursor: pointer;
 
@@ -322,7 +354,8 @@ p {
   display: flex;
   flex-direction: column;
 
-  padding: 0px 605px 0px 0px;
+  padding: 0px 31.51vw 0px 0px;
+  /* padding: 0px 605px 0px 0px; */
 
 }
 
@@ -335,8 +368,10 @@ p {
   border: none;
   border-radius: 8px;
 
-  margin: 8px 0px 0px 0px;
-  padding: 10px 0px 10px 0px;
+  margin: 0.84vh 0px 0px 0px;
+  padding: 1.05vh 0px 1.05vh 0px;
+  /* margin: 8px 0px 0px 0px;
+  padding: 10px 0px 10px 0px; */
 
   cursor: pointer;
 
