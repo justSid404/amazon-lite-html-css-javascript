@@ -143,6 +143,7 @@ function addProductHTML_OrderPage() {
                 document.querySelector(`.css-order-list-${placedOrderIndex}`).insertAdjacentHTML("beforeend", ordersSectionHTML);
             
             let tempBuyAgainButton = document.querySelector(`.buy-again-product-${placedOrderIndex}-${placedOrdersIndex}`);
+            let tempTrackPackageButton = document.querySelector(`.track-package-button-${placedOrderIndex}-${placedOrdersIndex}`);
 
             tempBuyAgainButton.addEventListener('click', () => {
       
@@ -153,6 +154,12 @@ function addProductHTML_OrderPage() {
       
               localStorage.setItem('cartLS', JSON.stringify(cart));
       
+            });
+
+            tempTrackPackageButton.addEventListener('click', () => {
+              
+              window.location.href = 'tracking-page.html';
+
             });
 
           });

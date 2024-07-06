@@ -1,0 +1,139 @@
+body {
+
+  background-color: white;
+
+  font-family: Roboto, Arial;
+
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+
+  height: 100vh;
+
+}
+
+.view-all-orders {
+
+  color: rgb(51, 118, 206);
+  text-decoration: underline;
+
+  margin: 0px 0px 30px 0px;
+
+}
+
+.view-all-orders:hover {
+
+  color: rgb(190, 124, 0);
+
+}
+
+.css-tracking-section {
+
+  display: flex;
+  flex-direction: column;
+
+  /* justify-content: center; */
+  /* align-items: center; */
+
+  padding: 90px 0px 0px 0px;
+
+  width: 850px;
+
+}
+
+.delivery-date {
+
+  font-weight: bold;
+  font-size: 25px;
+
+  margin: 0px 0px 10px 0px;
+
+}
+
+.delivery-product-name {
+
+  margin: 0px 0px 3px 0px;
+
+}
+
+.delivery-quantity {
+
+  margin: 0px 0px 3px 0px;
+
+}
+
+.delivery-product-image {
+
+  object-fit: cover;
+  object-position: center;
+
+  width: 150px;
+  height: 150px;
+
+  margin: 25px 0px 50px 0px;
+
+}
+
+.delivery-progress-section {
+
+  /* position: relative; */
+  
+}
+
+.progress-type {
+
+  display: flex;
+  flex-direction: row;
+
+  justify-content: space-between;
+
+  margin: 3px 0px 15px 0px;
+
+}
+
+.progress-type p {
+
+  font-weight: 500;
+  font-size: 20px;
+
+}
+
+.progress-bar-main {
+
+  position: relative;
+
+  background-color: rgb(245, 245, 245);
+  border: 1px solid rgb(177, 177, 177);
+  border-radius: 12px;
+
+  height: 24px;
+
+}
+
+.progress-bar-inner {
+
+  position: absolute;
+
+  /* top: 0px;
+  right: 0px;
+  left: 0px;
+  bottom: 0px; */
+
+  background-color: rgb(62, 148, 29);
+  border: none;
+  border-radius: 12px;
+
+  transition: width 2s;
+
+  width: 0%;
+
+  height: 24px;
+
+}
+
+body:hover .progress-bar-inner {
+
+  width: 100%;
+
+}

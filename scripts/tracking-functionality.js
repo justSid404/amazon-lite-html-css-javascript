@@ -1,0 +1,1 @@
+cartItemCountElement.innerHTML = cart.length;
