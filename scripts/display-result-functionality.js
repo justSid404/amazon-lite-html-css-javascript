@@ -101,7 +101,8 @@ function showResult_HomePage(products) {
               price : product.price,
               orderPlacedOn : new Date().toISOString().slice(0, 10),
               deliveryType : 0,
-              deliveryCost : 0
+              deliveryCost : 0,
+              deliveryProgressStage : 0
             });
             break;
 
@@ -120,7 +121,8 @@ function showResult_HomePage(products) {
           price : product.price,
           orderPlacedOn : new Date().toISOString().slice(0, 10),
           deliveryType : 0,
-          deliveryCost : 0
+          deliveryCost : 0,
+          deliveryProgressStage : 0
         });
 
       }

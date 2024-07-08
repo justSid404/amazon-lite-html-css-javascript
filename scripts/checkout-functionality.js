@@ -91,7 +91,6 @@ function addProductHTML_CheckoutPage() {
         placedOrders.push({
           orderID : '0f6dc0f3-ad1f-5c72-8892-826deea97d6f',
           orderPlacedOn : new Date().toISOString().slice(0, 10),
-          deliveryStage : 0,
           orderTotal : checkoutTotalCost,
           orderList : cart
         });

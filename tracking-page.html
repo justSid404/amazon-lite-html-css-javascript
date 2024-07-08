@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="styles/tracking-page.css">
 
   </head>
-  <body>
+  <body onload="updateDeliveryProgressBar()">
     
     <div class="css-header">
 
@@ -71,34 +71,9 @@
 
     <div class="css-tracking-section">
 
-      <a class = 'view-all-orders' href="home-page.html">View all orders</a>
 
-      <p class = "delivery-date">Delivered on Friday, July 5</p>
-      <p class = "delivery-product-name">Intermediate Size Basketball</p>
-      <p class = "delivery-quantity">Quantity: 1</p>
-
-      <img class="delivery-product-image" src="images/intermediate-composite-basketball.jpg" alt="">
-
-      <div class="delivery-progress-section">
-
-        <div class="progress-type">
-
-          <p class="progress-type-preparing">Preparing</p>
-
-          <p class="progress-type-shipped">Shipped</p>
-
-          <p class="progress-type-delivered">Delivered</p>
-
-        </div>
-
-        <div class="progress-bar-main">
-          <div class="progress-bar-inner"></div>
-        </div>
-
-      </div>
 
     </div>
-    
 
     <script src="scripts/required-variables.js"></script>
     <script src="scripts/tracking-functionality.js"></script>

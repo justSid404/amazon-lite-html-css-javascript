@@ -158,6 +158,9 @@ function addProductHTML_OrderPage() {
 
             tempTrackPackageButton.addEventListener('click', () => {
               
+              orderToTrack = [];
+              orderToTrack.push(placedOrdersProduct);
+              localStorage.setItem('orderToTrackLS', JSON.stringify(orderToTrack));
               window.location.href = 'tracking-page.html';
 
             });

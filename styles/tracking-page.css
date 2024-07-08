@@ -36,9 +36,9 @@ body {
   /* justify-content: center; */
   /* align-items: center; */
 
-  padding: 90px 0px 0px 0px;
+  padding: 9.52vh 0px 0px 0px;
 
-  width: 850px;
+  width: 44.27vw;
 
 }
 
@@ -65,7 +65,7 @@ body {
 
 .delivery-product-image {
 
-  object-fit: cover;
+  object-fit: contain;
   object-position: center;
 
   width: 150px;
@@ -73,12 +73,6 @@ body {
 
   margin: 25px 0px 50px 0px;
 
-}
-
-.delivery-progress-section {
-
-  /* position: relative; */
-  
 }
 
 .progress-type {
@@ -132,7 +126,19 @@ body {
 
 }
 
-body:hover .progress-bar-inner {
+.progress-bar-inner-stage-0 {
+
+  width: 5%;
+
+}
+
+.progress-bar-inner-stage-1 {
+
+  width: 50%;
+
+}
+
+.progress-bar-inner-stage-2 {
 
   width: 100%;
 

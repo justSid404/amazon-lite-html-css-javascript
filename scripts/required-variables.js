@@ -382,6 +382,7 @@ let products = [
 
 let cart = [];
 let placedOrders = [];
+let orderToTrack = [];
 let timeoutID;
 
 try {
@@ -455,4 +456,16 @@ try {
 
 } catch(exception) {
   //No order in cart
+}
+
+try {
+
+  if(localStorage.getItem('orderToTrackLS') !== null) {
+
+    orderToTrack = JSON.parse(localStorage.getItem('orderToTrackLS'));
+
+  }
+
+} catch(exception) {
+  //No order to track
 }
