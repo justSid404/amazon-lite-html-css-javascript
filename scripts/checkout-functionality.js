@@ -90,7 +90,8 @@ function addProductHTML_CheckoutPage() {
       document.querySelector(`.checkout-place-order-button`).addEventListener('click', () => {
         placedOrders.push({
           orderID : '0f6dc0f3-ad1f-5c72-8892-826deea97d6f',
-          orderPlacedOn : new Date().toISOString().slice(0, 10),
+          orderPlacedOnUnformated : new Date(),
+          orderPlacedOn : formatDate(new Date(), "long", "long", "numeric"),
           orderTotal : checkoutTotalCost,
           orderList : cart
         });
@@ -140,7 +141,7 @@ function addProductHTML_CheckoutPage() {
                       <input type="radio" class="checkout-product-${cartIndex}-delivery-radio-option1" name = "checkout-product-${cartIndex}">
                       <div style="display: inline-block;">
     
-                        <p style="color: green; font-weight: 500; margin: 0px 0px 3px 0px;">Wednesday, July 3</p>
+                        <p style="color: green; font-weight: 500; margin: 0px 0px 3px 0px;">${formatDate(updateDate(cartItem.orderPlacedOnUnformated, '+', 'days', 9), 'long', 'long', 'numeric')}</p>
                         <p style="color: rgb(116, 116, 116); font-size: 15px;">FREE Shipping</p>
     
                       </div>
@@ -159,7 +160,7 @@ function addProductHTML_CheckoutPage() {
                       <input type="radio" class="checkout-product-${cartIndex}-delivery-radio-option2" name = "checkout-product-${cartIndex}">
                       <div style="display: inline-block;">
     
-                        <p style="color: green; font-weight: 500; margin: 0px 0px 3px 0px;">Thursday, June 27</p>
+                        <p style="color: green; font-weight: 500; margin: 0px 0px 3px 0px;">${formatDate(updateDate(cartItem.orderPlacedOnUnformated, '+', 'days', 3), 'long', 'long', 'numeric')}</p>
                         <p style="color: rgb(116, 116, 116); font-size: 15px;">$4.99 - Shipping</p>
     
                       </div>
@@ -178,7 +179,7 @@ function addProductHTML_CheckoutPage() {
                       <input type="radio" class="checkout-product-${cartIndex}-delivery-radio-option3" name = "checkout-product-${cartIndex}">
                       <div style="display: inline-block;">
     
-                        <p style="color: green; font-weight: 500; margin: 0px 0px 3px 0px;">Tuesday, June 25</p>
+                        <p style="color: green; font-weight: 500; margin: 0px 0px 3px 0px;">${formatDate(updateDate(cartItem.orderPlacedOnUnformated, '+', 'days', 1), 'long', 'long', 'numeric')}</p>
                         <p style="color: rgb(116, 116, 116); font-size: 15px;">$9.99 - Shipping</p>
     
                       </div>
@@ -212,17 +213,38 @@ function addProductHTML_CheckoutPage() {
 
       if(cartItem.deliveryType === 0) {
 
+        const deliveryDateHeaderPerItem = document.querySelector(`.cheakout-product-${cartIndex}-delivery-date`);
+        
+        let dateToFormat = updateDate(cart[cartIndex].orderPlacedOnUnformated, "+", "days", 9);
+        cart[cartIndex].deliveryDate = formatDate(dateToFormat, "long", "long", "numeric");
+
+        deliveryDateHeaderPerItem.innerHTML = `Delivery date: ${cart[cartIndex].deliveryDate}`;
+
         tempDeliveryOprion1.click();
         cart[cartIndex].deliveryType = 0;
         cart[cartIndex].deliveryCost = 0;
 
       } else if(cartItem.deliveryType === 1) {
 
+        const deliveryDateHeaderPerItem = document.querySelector(`.cheakout-product-${cartIndex}-delivery-date`);
+        
+        let dateToFormat = updateDate(cart[cartIndex].orderPlacedOnUnformated, "+", "days", 3);
+        cart[cartIndex].deliveryDate = formatDate(dateToFormat, "long", "long", "numeric");
+
+        deliveryDateHeaderPerItem.innerHTML = `Delivery date: ${cart[cartIndex].deliveryDate}`;
+
         tempDeliveryOprion2.click();
         cart[cartIndex].deliveryType = 1;
         cart[cartIndex].deliveryCost = 499;
 
       } else if(cartItem.deliveryType === 2) {
+
+        const deliveryDateHeaderPerItem = document.querySelector(`.cheakout-product-${cartIndex}-delivery-date`);
+        
+        let dateToFormat = updateDate(cart[cartIndex].orderPlacedOnUnformated, "+", "days", 1);
+        cart[cartIndex].deliveryDate = formatDate(dateToFormat, "long", "long", "numeric");
+
+        deliveryDateHeaderPerItem.innerHTML = `Delivery date: ${cart[cartIndex].deliveryDate}`;
 
         tempDeliveryOprion3.click();
         cart[cartIndex].deliveryType = 2;
@@ -233,22 +255,49 @@ function addProductHTML_CheckoutPage() {
       itemTotalShippingCost += tempDeliveryCost;
 
       tempDeliveryOprion1Label.addEventListener('click', () => {
+
+        const deliveryDateHeaderPerItem = document.querySelector(`.cheakout-product-${cartIndex}-delivery-date`);
         
+        let dateToFormat = updateDate(cart[cartIndex].orderPlacedOnUnformated, "+", "days", 9);
+        cart[cartIndex].deliveryDate = formatDate(dateToFormat, "long", "long", "numeric");
+
+        deliveryDateHeaderPerItem.innerHTML = `Delivery date: ${cart[cartIndex].deliveryDate}`;
+
+        cart[cartIndex].deliveryType = 0;
         cart[cartIndex].deliveryCost = 0;
+        localStorage.setItem('cartLS', JSON.stringify(cart));
         updateSummary();
 
       });
 
       tempDeliveryOprion2Label.addEventListener('click', () => {
 
+        const deliveryDateHeaderPerItem = document.querySelector(`.cheakout-product-${cartIndex}-delivery-date`);
+        
+        let dateToFormat = updateDate(cart[cartIndex].orderPlacedOnUnformated, "+", "days", 3);
+        cart[cartIndex].deliveryDate = formatDate(dateToFormat, "long", "long", "numeric");
+
+        deliveryDateHeaderPerItem.innerHTML = `Delivery date: ${cart[cartIndex].deliveryDate}`;
+
+        cart[cartIndex].deliveryType = 1;
         cart[cartIndex].deliveryCost = 499;
+        localStorage.setItem('cartLS', JSON.stringify(cart));
         updateSummary();
 
       });
 
       tempDeliveryOprion3Label.addEventListener('click', () => {
 
+        const deliveryDateHeaderPerItem = document.querySelector(`.cheakout-product-${cartIndex}-delivery-date`);
+        
+        let dateToFormat = updateDate(cart[cartIndex].orderPlacedOnUnformated, "+", "days", 1);
+        cart[cartIndex].deliveryDate = formatDate(dateToFormat, "long", "long", "numeric");
+
+        deliveryDateHeaderPerItem.innerHTML = `Delivery date: ${cart[cartIndex].deliveryDate}`;
+
+        cart[cartIndex].deliveryType = 2;
         cart[cartIndex].deliveryCost = 999;
+        localStorage.setItem('cartLS', JSON.stringify(cart));
         updateSummary();
 
       });

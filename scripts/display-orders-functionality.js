@@ -121,7 +121,7 @@ function addProductHTML_OrderPage() {
                     <div class="info-and-buy-again">
         
                       <p class="order-title">${placedOrdersProduct.name}</p>
-                      <p class="order-arrives-on">Arriving on: ${placedOrdersProduct.orderPlacedOn}</p>
+                      <p class="order-arrives-on">Arriving on: ${placedOrdersProduct.deliveryDate}</p>
                       <p class="order-quantity">Quantity: ${placedOrdersProduct.quantity}</p>
         
                       <button class="buy-again-product-${placedOrderIndex}-${placedOrdersIndex} buy-again">

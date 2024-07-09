@@ -469,3 +469,62 @@ try {
 } catch(exception) {
   //No order to track
 }
+
+function updateDate(dateToUpdate, operationType, operationUnit, updateByValue) {
+
+  const result = new Date(dateToUpdate);
+
+  if(operationUnit.toLowerCase() === 'days' || operationUnit.toLowerCase() === 'day') {
+
+    if(operationType === '+') {
+
+      result.setDate(result.getDate() + updateByValue);
+
+    } else if(operationType === '-') {
+
+      result.setDate(result.getDate() - updateByValue);
+
+    }
+
+  } else if(operationUnit.toLowerCase() === 'months' || operationUnit.toLowerCase() === 'month') {
+
+    if(operationType === '+') {
+
+      result.setDate(result.getMonth() + updateByValue);
+
+    } else if(operationType === '-') {
+
+      result.setDate(result.getMonth() - updateByValue);
+
+    }
+
+  } else if(operationUnit.toLowerCase() === 'years' || operationUnit.toLowerCase() === 'year') {
+
+    if(operationType === '+') {
+
+      result.setDate(result.getFullYear() + updateByValue);
+
+    } else if(operationType === '-') {
+
+      result.setDate(result.getFullYear() - updateByValue);
+
+    }
+
+  }
+
+  return result;
+
+}
+
+function formatDate(dateToFormat, weekdayOption, monthOption, dayOption) {
+
+  const options = { weekday: weekdayOption, month: monthOption, day: dayOption };
+  const formattedDate = dateToFormat.toLocaleDateString('en-US', options);
+  
+  return formattedDate;
+
+}
+
+// let dateToFormat = updateDate("2024-07-09", "+", "days", 3);
+// console.log(dateToFormat);
+// console.log(formatDate(dateToFormat, "long", "long", "numeric"));
