@@ -14,7 +14,8 @@ body {
   color: black;
 
   padding: 10vh 0px 0px 0px;
-  margin: 0px 0px 8px 0px;
+  margin: 0px 0px 0.84vh 0px;
+  /* margin: 0px 0px 8px 0px; */
 
 }
 
@@ -23,7 +24,8 @@ body {
   display: flex;
   align-items: start;
 
-  margin: 0px 0px 28px 0px;
+  margin: 0px 0px 2.96vh 0px;
+  /* margin: 0px 0px 28px 0px; */
 
   width: 45vw;
 
@@ -48,7 +50,8 @@ body {
   border-radius: 8px 8px 0px 0px;
 
   margin: 0px 0px 0px 0px;
-  padding: 20px 25px 20px 25px;
+  padding: 2.11vh 1.30vw 2.11vh 1.30vw;
+  /* padding: 20px 25px 20px 25px; */
 
   width: 42.5vw;
 
@@ -68,12 +71,14 @@ body {
 
 .order-placed-date {
 
-  width: 6.92vw;
+  width: 7.6vw;
+  /* width: 6.92vw; */
 
 }
 
 .order-id {
-  width: 300px;
+  width: 15.62vw;
+  /* width: 300px; */
 }
 
 .css-order-list {
@@ -82,7 +87,8 @@ body {
   border-top: none;
   border-radius: 0px 0px 8px 8px;
 
-  margin: 0px 0px 46px 0px;
+  margin: 0px 0px 4.86vh 0px;
+  /* margin: 0px 0px 46px 0px; */
 
 }
 
@@ -91,18 +97,23 @@ body {
   display: flex;
   flex-direction: row;
 
-  margin: 0px 0px 35px 0px;
-  padding: 40px 25px 0px 25px;
+  margin: 0px 0px 3.70vh 0px;
+  padding: 4.23vh 1.30vw 0px 1.30vw;
+  /* margin: 0px 0px 35px 0px;
+  padding: 40px 25px 0px 25px; */
 
 }
 
 .product-image {
 
-  margin: 0px 35px 0px 0px;
+  margin: 0px 1.82vw 0px 0px;
+  /* margin: 0px 35px 0px 0px; */
   padding: 0px 0px 0px 0px;
 
-  width: 114px;
-  height: 110px;
+  width: 5.93vw;
+  height: 11.64vh;
+  /* width: 114px;
+  height: 110px; */
 
 }
 
@@ -114,7 +125,8 @@ body {
 
 .info-and-buy-again p {
 
-  margin: 0px 0px 6px 0px;
+  margin: 0px 0px 0.63vh 0px;
+  /* margin: 0px 0px 6px 0px; */
 
 }
 
@@ -136,9 +148,11 @@ body {
   border: none;
   border-radius: 8px;
 
-  height: 35px;
+  height: 3.70vh;
+  /* height: 35px; */
 
-  padding: 4px 8px 4px 8px;
+  padding: 0.42vh 0.41vw 0.42vh 0.41vw;
+  /* padding: 4px 8px 4px 8px; */
 
   cursor: pointer;
 
@@ -152,17 +166,17 @@ body {
 
 .buy-again img{
 
-  margin: 0px 12px 0px 0px;
-
   min-height: 100%;
 
-  margin: 0px 12px 0px 0px;
+  margin: 0px 0.62vw 0px 0px;
+  /* margin: 0px 12px 0px 0px; */
 
 }
 
 .track-package-div {
 
-  width: 220px;
+  width: 11.45vw;
+  /* width: 220px; */
 
 }
 
@@ -176,7 +190,8 @@ body {
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
 
   margin: 0px 0px 0px 0px;
-  padding: 8px 0px 8px 0px;
+  padding: 0.84vh 0px 0.84vh 0px;
+  /* padding: 8px 0px 8px 0px; */
 
   width: 100%;
 
@@ -197,7 +212,8 @@ body {
   justify-content: center;
   align-items: center;
 
-  padding: 80px 80px 80px 80px;
+  padding: 8.46vh 4.16vw 8.46vh 4.16vw;
+  /* padding: 80px 80px 80px 80px; */
 
 }
 

@@ -518,7 +518,22 @@ function updateDate(dateToUpdate, operationType, operationUnit, updateByValue) {
 
 function formatDate(dateToFormat, weekdayOption, monthOption, dayOption) {
 
-  const options = { weekday: weekdayOption, month: monthOption, day: dayOption };
+  let options;
+
+  console.log(weekdayOption.length +" || "+ monthOption.length +" || "+ dayOption.length);
+
+  if(weekdayOption.length < 1 && monthOption.length > 1 && dayOption.length > 1)  {
+
+    options = { month: monthOption, day: dayOption };
+    console.log("options = { month: monthOption, day: dayOption }");
+
+  } else if(weekdayOption.length > 1 && monthOption.length > 1 && dayOption.length > 1) {
+
+    options = { weekday: weekdayOption, month: monthOption, day: dayOption };
+    console.log("options = { weekday: weekdayOption, month: monthOption, day: dayOption }");
+
+  }
+
   const formattedDate = dateToFormat.toLocaleDateString('en-US', options);
   
   return formattedDate;

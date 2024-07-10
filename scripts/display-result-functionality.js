@@ -100,7 +100,7 @@ function showResult_HomePage(products) {
               quantity : tempQuantityBtnElement.value,
               price : product.price,
               orderPlacedOnUnformated : new Date(),
-              orderPlacedOn : formatDate(new Date(), "long", "long", "numeric"),
+              orderPlacedOn : formatDate(new Date(), "", "long", "numeric"),
               deliveryType : 0,
               deliveryCost : 0,
               deliveryProgressStage : 0
@@ -121,7 +121,7 @@ function showResult_HomePage(products) {
           quantity : tempQuantityBtnElement.value,
           price : product.price,
           orderPlacedOnUnformated : new Date(),
-          orderPlacedOn : formatDate(new Date(), "long", "long", "numeric"),
+          orderPlacedOn : formatDate(new Date(), "", "long", "numeric"),
           deliveryType : 0,
           deliveryCost : 0,
           deliveryProgressStage : 0

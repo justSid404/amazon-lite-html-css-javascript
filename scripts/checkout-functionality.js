@@ -91,7 +91,7 @@ function addProductHTML_CheckoutPage() {
         placedOrders.push({
           orderID : '0f6dc0f3-ad1f-5c72-8892-826deea97d6f',
           orderPlacedOnUnformated : new Date(),
-          orderPlacedOn : formatDate(new Date(), "long", "long", "numeric"),
+          orderPlacedOn : formatDate(new Date(), "", "long", "numeric"),
           orderTotal : checkoutTotalCost,
           orderList : cart
         });
