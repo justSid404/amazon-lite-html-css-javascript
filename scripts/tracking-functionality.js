@@ -1,4 +1,12 @@
-cartItemCountElement.innerHTML = cart.length;
+if(cart.length <= 9) {
+
+  cartItemCountElement.innerHTML = cart.length;
+
+} else {
+
+  cartItemCountElement.innerHTML = "9+";
+
+}
 
 console.log(orderToTrack);
 
