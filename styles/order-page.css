@@ -275,7 +275,7 @@ body {
     padding: 2.11vh 1.30vw 2.11vh 1.30vw;
     /* padding: 20px 25px 20px 25px; */
   
-    width: 80vw;
+    width: 89.92vw;
   
   }
 
@@ -290,6 +290,45 @@ body {
   .order-id {
     width: 30vw;
     /* width: 300px; */
+  }
+
+  .css-order-list .product {
+  
+    display: flex;
+    flex-direction: row;
+  
+    margin: 0px 0px 4.76vh 0px;
+    padding: 5.44vh 6.06vw 0px 6.06vw;
+    /* margin: 0px 0px 35px 0px;
+    padding: 40px 25px 0px 25px; */
+  
+  }
+
+  .product-image {
+  
+    margin: 0px 1.82vw 0px 0px;
+    /* margin: 0px 35px 0px 0px; */
+    padding: 0px 0px 0px 0px;
+  
+    width: 16vw;
+    /* width: 114px;
+    height: 110px; */
+  
+  }
+
+  .info-and-buy-again {
+  
+    flex: 1;
+
+    max-width: 37.2vw;
+  
+  }
+
+  .track-package-div {
+  
+    width: 25vw;
+    /* width: 220px; */
+  
   }
   
 }
