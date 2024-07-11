@@ -133,14 +133,25 @@ function showResult_HomePage(products) {
 
       localStorage.setItem('cartLS', JSON.stringify(cart));
 
-      tempAddIconElement.classList.remove('hide-if-not-added');
-      tempAddTextElement.classList.remove('hide-if-not-added');
-      
-      clearTimeout(timeoutID);
-      timeoutID = setTimeout(() => {
-        tempAddIconElement.classList.add('hide-if-not-added');
-        tempAddTextElement.classList.add('hide-if-not-added');
-      },2000);
+      if(tempAddIconElement.classList.contains('hide-if-not-added')) {
+
+        tempAddIconElement.classList.remove('hide-if-not-added');
+        tempAddTextElement.classList.remove('hide-if-not-added');
+
+        timeoutID = setTimeout(() => {
+          tempAddIconElement.classList.add('hide-if-not-added');
+          tempAddTextElement.classList.add('hide-if-not-added');
+        },2000);
+
+      } else {
+
+        clearTimeout(timeoutID);
+        timeoutID = setTimeout(() => {
+          tempAddIconElement.classList.add('hide-if-not-added');
+          tempAddTextElement.classList.add('hide-if-not-added');
+        },2000);
+
+      }
   
       let cartItemCount = 0;
       

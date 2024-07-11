@@ -11,6 +11,8 @@ if(cart.length <= 9) {
 searchBoxElement.addEventListener('keydown', (event) => {
 
   if(event.key === 'Enter') {
+
+    // window.location.href = 'home-page.html';
     productListingElement.innerHTML = '';
     searchButtonAction(products);
   }
@@ -18,6 +20,8 @@ searchBoxElement.addEventListener('keydown', (event) => {
 });
 
 searchButtonElement.addEventListener('click', () => {
+
+  // window.location.href = 'home-page.html';
   productListingElement.innerHTML = '';
   searchButtonAction(products);
 });
@@ -44,6 +48,8 @@ function searchButtonAction(searchData) {
     }
   });
 
-  showResult(searchResult);
+  // searchBoxElement.value = searchKeyword;
+
+  showResult_HomePage(searchResult);
 
 }
