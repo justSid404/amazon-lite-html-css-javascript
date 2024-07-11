@@ -238,3 +238,58 @@ body {
   font-weight: bold;
 
 }
+
+@media screen and (max-width: 600px) {
+
+  .css-heading-container {
+  
+    display: flex;
+    align-items: start;
+  
+    margin: 0px 0px 2.96vh 0px;
+    /* margin: 0px 0px 28px 0px; */
+  
+    width: 83.5vw;
+  
+  }
+
+  .css-heading-container p {
+  
+    color: black;
+    font-weight: bold;
+    font-size: 24px;
+  
+  }
+
+  .css-order-info {
+  
+    display: flex;
+    flex-direction: row;
+  
+    background-color: rgb(241, 241, 241);
+  
+    border: solid 1px rgb(206, 206, 206);
+    border-radius: 8px 8px 0px 0px;
+  
+    margin: 0px 0px 0px 0px;
+    padding: 2.11vh 1.30vw 2.11vh 1.30vw;
+    /* padding: 20px 25px 20px 25px; */
+  
+    width: 80vw;
+  
+  }
+
+  .order-placed-date {
+  
+    padding: 0px 0px 0px 4vw;
+    width: 20vw;
+    /* width: 6.92vw; */
+  
+  }
+  
+  .order-id {
+    width: 30vw;
+    /* width: 300px; */
+  }
+  
+}
