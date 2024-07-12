@@ -141,8 +141,8 @@ function addProductHTML_CheckoutPage() {
                       <input type="radio" class="checkout-product-${cartIndex}-delivery-radio-option1" name = "checkout-product-${cartIndex}">
                       <div style="display: inline-block;">
     
-                        <p style="color: green; font-weight: 500; margin: 0px 0px 3px 0px;">${formatDate(updateDate(cartItem.orderPlacedOnUnformated, '+', 'days', 9), 'long', 'long', 'numeric')}</p>
-                        <p style="color: rgb(116, 116, 116); font-size: 15px;">FREE Shipping</p>
+                        <p class = "shipping-date-label">${formatDate(updateDate(cartItem.orderPlacedOnUnformated, '+', 'days', 9), 'long', 'long', 'numeric')}</p>
+                        <p class = "shipping-label">FREE Shipping</p>
     
                       </div>
     
@@ -160,8 +160,8 @@ function addProductHTML_CheckoutPage() {
                       <input type="radio" class="checkout-product-${cartIndex}-delivery-radio-option2" name = "checkout-product-${cartIndex}">
                       <div style="display: inline-block;">
     
-                        <p style="color: green; font-weight: 500; margin: 0px 0px 3px 0px;">${formatDate(updateDate(cartItem.orderPlacedOnUnformated, '+', 'days', 3), 'long', 'long', 'numeric')}</p>
-                        <p style="color: rgb(116, 116, 116); font-size: 15px;">$4.99 - Shipping</p>
+                        <p class = "shipping-date-label"${formatDate(updateDate(cartItem.orderPlacedOnUnformated, '+', 'days', 3), 'long', 'long', 'numeric')}</p>
+                        <p class = "shipping-label">$4.99 - Shipping</p>
     
                       </div>
     
@@ -179,8 +179,8 @@ function addProductHTML_CheckoutPage() {
                       <input type="radio" class="checkout-product-${cartIndex}-delivery-radio-option3" name = "checkout-product-${cartIndex}">
                       <div style="display: inline-block;">
     
-                        <p style="color: green; font-weight: 500; margin: 0px 0px 3px 0px;">${formatDate(updateDate(cartItem.orderPlacedOnUnformated, '+', 'days', 1), 'long', 'long', 'numeric')}</p>
-                        <p style="color: rgb(116, 116, 116); font-size: 15px;">$9.99 - Shipping</p>
+                        <p class = "shipping-date-label">${formatDate(updateDate(cartItem.orderPlacedOnUnformated, '+', 'days', 1), 'long', 'long', 'numeric')}</p>
+                        <p class = "shipping-label">$9.99 - Shipping</p>
     
                       </div>
     

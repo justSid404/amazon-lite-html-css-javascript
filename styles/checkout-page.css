@@ -192,6 +192,20 @@ p {
 
 }
 
+.shipping-date-label {
+  
+  color: green; font-weight: 500; margin: 0px 0px 3px 0px;
+  font-size: 15px;
+
+}
+
+.shipping-label {
+
+  color: rgb(116, 116, 116);
+  font-size: 15px;
+
+}
+
 .cheakout-product-quantity-update, .cheakout-product-quantity-delete, .cheakout-product-quantity-save {
 
   display: inline-block;
@@ -390,7 +404,7 @@ p {
 
   body {
   
-    padding: 2.5vh 5vw 0px 5vw;
+    padding: 2.5vh 2vw 0px 2vw;
   
   }
 
@@ -485,6 +499,67 @@ p {
 
     border-radius: 8px;
     padding: 1.78vh 0px 1.78vh 0px;
+  
+  }
+
+  .cheakout-product {
+  
+    padding: 1.25vh 2vw 2vh 2vw;
+  
+  }
+
+  .cheakout-product-delivery-date {
+  
+    font-size: 13px;
+    margin: 0px 0px 2.32vh 0px;
+    /* margin: 0px 0px 22px 0px; */
+  
+  }
+
+  .checkout-product-information img {
+  
+    width: 10vw;
+  
+  }
+
+  .checkout-product-main-info {
+  
+    font-size: 12px;
+    width: 40vw;
+  
+  }
+
+  .checkout-product-delivery {
+
+    font-size: 12px;
+    width: 40vw;
+
+  }
+
+  .shipping-date-label {
+    
+    font-size: 9px;
+    /* width: 15vw */
+
+  }
+
+  .shipping-label {
+
+    font-size: 9px;
+
+  }
+
+  .checkout-product-delivery-option {
+    
+    margin: 0px 0px 0.5vh 0px;
+  
+  }
+
+  .checkout-product-delivery-option input {
+  
+    width: 2vw;
+    margin: 0.21vh 1vw 0px 0.05vw;
+    /* margin: 2px 5px 0px 1px; */
   
   }
   
