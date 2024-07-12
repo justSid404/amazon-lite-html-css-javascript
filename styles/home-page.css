@@ -627,9 +627,10 @@ a:active {
 
   .cartItemCount {
   
+    font-size: 12px;
     position: absolute;
-    top: 0vh;
-    right: 10.5vw;
+    top: 0.5vh;
+    right: 10.6vw;
     /* top: 10px;
     right: 73px; */
   
@@ -641,8 +642,8 @@ a:active {
   .cartItemCountMoreThan9 {
   
     position: absolute;
-    top: 0vh;
-    right: 2.8vw;
+    top: 0.5vh;
+    right: 9.7vw;
     /* top: 10px;
     right: 68px; */
   
