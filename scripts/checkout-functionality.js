@@ -160,7 +160,7 @@ function addProductHTML_CheckoutPage() {
                       <input type="radio" class="checkout-product-${cartIndex}-delivery-radio-option2" name = "checkout-product-${cartIndex}">
                       <div style="display: inline-block;">
     
-                        <p class = "shipping-date-label"${formatDate(updateDate(cartItem.orderPlacedOnUnformated, '+', 'days', 3), 'long', 'long', 'numeric')}</p>
+                        <p class = "shipping-date-label">${formatDate(updateDate(cartItem.orderPlacedOnUnformated, '+', 'days', 3), 'long', 'long', 'numeric')}</p>
                         <p class = "shipping-label">$4.99 - Shipping</p>
     
                       </div>
