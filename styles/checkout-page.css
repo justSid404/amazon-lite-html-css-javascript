@@ -175,6 +175,13 @@ p {
 
 }
 
+.delivery-option-header {
+
+  font-weight: bold;
+  margin: 0px 0px 10px 1px;
+
+}
+
 .checkout-product-delivery-option {
 
   display: flex;
@@ -258,6 +265,7 @@ p {
   margin: 0px 0px 0px 0px;
 
   width: 16.25vw;
+  height: 100%;
   /* width: 312px; */
 
 }
@@ -533,6 +541,14 @@ p {
 
     font-size: 12px;
     width: 40vw;
+
+  }
+
+  .delivery-option-header {
+
+    /* font-weight: bold; margin: 0px 0px 10px 1px; */
+    font-weight: bold;
+    margin: 0px 0px 0.5vh 1px;
 
   }
 

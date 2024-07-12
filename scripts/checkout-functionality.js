@@ -131,7 +131,7 @@ function addProductHTML_CheckoutPage() {
     
               <div class="checkout-product-${cartIndex}-delivery checkout-product-delivery">
       
-                <p style="font-weight: bold; margin: 0px 0px 10px 1px;">Choose a delivery option:</p>
+                <p class = "delivery-option-header">Choose a delivery option:</p>
                 <div class="checkout-product-${cartIndex}-delivery-option1 checkout-product-delivery-option">
       
                   <div>
