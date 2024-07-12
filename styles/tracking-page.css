@@ -9,7 +9,7 @@ body {
 
   align-items: center;
 
-  height: 100vh;
+  /* height: 100vh; */
 
 }
 
@@ -147,5 +147,51 @@ body {
 .green {
 
   color: green;
+
+}
+
+@media screen and (max-width: 600px) {
+
+.css-tracking-section {
+
+  width: 83.5vw;
+
+}
+
+.progress-type p {
+
+  font-size: 16px;
+
+}
+
+.progress-bar-main {
+
+  height: 18px;
+
+}
+
+.progress-bar-inner {
+
+  height: 18px;
+
+}
+
+.progress-bar-inner-stage-0 {
+
+  width: 10%;
+
+}
+
+.progress-bar-inner-stage-1 {
+
+  width: 50%;
+
+}
+
+.progress-bar-inner-stage-2 {
+
+  width: 100%;
+
+}
 
 }
