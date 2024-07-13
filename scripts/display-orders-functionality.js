@@ -124,7 +124,7 @@ function addProductHTML_OrderPage() {
                       <p class="order-arrives-on">Arriving on: ${placedOrdersProduct.deliveryDate}</p>
                       <p class="order-quantity">Quantity: ${placedOrdersProduct.quantity}</p>
         
-                      <button class="buy-again-product-${placedOrderIndex}-${placedOrdersIndex} buy-again">
+                      <button class="buy-again-product-${placedOrderIndex}-${placedOrdersIndex} buy-again disable-button">
                         <img src="images/buy-again.png" alt="buy-again">Buy it again
                       </button>
         
@@ -145,6 +145,12 @@ function addProductHTML_OrderPage() {
             let tempBuyAgainButton = document.querySelector(`.buy-again-product-${placedOrderIndex}-${placedOrdersIndex}`);
             let tempTrackPackageButton = document.querySelector(`.track-package-button-${placedOrderIndex}-${placedOrdersIndex}`);
 
+            if(placedOrdersProduct.deliveryProgressStage === 2) {
+
+              tempBuyAgainButton.classList.remove('disable-button');
+
+            }
+
             tempBuyAgainButton.addEventListener('click', () => {
       
               cart.push(placedOrdersProduct);
@@ -159,11 +165,32 @@ function addProductHTML_OrderPage() {
             tempTrackPackageButton.addEventListener('click', () => {
               
               orderToTrack = [];
-              orderToTrack.push(placedOrdersProduct);
+              orderToTrack.push(placedOrders[placedOrderIndex].orderList[placedOrdersIndex]);
+              // orderToTrack.push(placedOrdersProduct);
               localStorage.setItem('orderToTrackLS', JSON.stringify(orderToTrack));
               window.location.href = 'tracking-page.html';
 
             });
+
+            const dateAdd2AndHalfMin = new Date(placedOrdersProduct.orderPlacedOnUnformated);
+            const dateAdd5min = new Date(placedOrdersProduct.orderPlacedOnUnformated);
+            dateAdd2AndHalfMin.setMinutes(dateAdd2AndHalfMin.getMinutes() + 2);
+            dateAdd2AndHalfMin.setSeconds(dateAdd2AndHalfMin.getSeconds() + 30);
+            dateAdd5min.setMinutes(dateAdd5min.getMinutes() + 5);
+
+            if(dateAdd2AndHalfMin.toISOString() <= new Date().toISOString()) {
+                
+              placedOrders[placedOrderIndex].orderList[placedOrdersIndex].deliveryProgressStage = 1;
+              localStorage.setItem('placedOrdersLS', JSON.stringify(placedOrders));
+
+            }
+
+            if(dateAdd5min.toISOString() <= new Date().toISOString()) {
+              
+              placedOrders[placedOrderIndex].orderList[placedOrdersIndex].deliveryProgressStage = 2;
+              localStorage.setItem('placedOrdersLS', JSON.stringify(placedOrders));
+
+            }
 
           });
 

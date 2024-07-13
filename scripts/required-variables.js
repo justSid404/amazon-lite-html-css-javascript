@@ -384,6 +384,7 @@ let cart = [];
 let placedOrders = [];
 let orderToTrack = [];
 let timeoutID;
+let deliveryStatusTimerID;
 
 try {
 

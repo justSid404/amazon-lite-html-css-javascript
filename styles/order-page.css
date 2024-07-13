@@ -239,6 +239,14 @@ body {
 
 }
 
+.disable-button {
+
+  opacity: 0.5;
+  
+  pointer-events: none;
+
+}
+
 @media screen and (max-width: 600px) {
 
   .css-heading-container {
