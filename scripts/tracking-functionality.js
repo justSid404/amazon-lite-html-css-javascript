@@ -38,6 +38,34 @@ document.querySelector('.css-tracking-section').innerHTML = `
 
       </div>`;
 
+let deliveryStatusTimerID;
+
+  const dateAdd2AndHalfMin = new Date(orderToTrack[0].orderPlacedOnUnformated);
+  const dateAdd5min = new Date(orderToTrack[0].orderPlacedOnUnformated);
+  dateAdd2AndHalfMin.setMinutes(dateAdd2AndHalfMin.getMinutes() + 2);
+  dateAdd2AndHalfMin.setSeconds(dateAdd2AndHalfMin.getSeconds() + 30);
+  dateAdd5min.setMinutes(dateAdd5min.getMinutes() + 5);
+
+  deliveryStatusTimerID = setInterval(() => {
+
+    if(dateAdd2AndHalfMin.toISOString() <= new Date().toISOString()) {
+
+      orderToTrack[0].deliveryProgressStage = 1;
+      updateDeliveryProgressBar();
+
+    }
+
+    if(dateAdd5min.toISOString() <= new Date().toISOString()) {
+
+      orderToTrack[0].deliveryProgressStage = 2;
+      updateDeliveryProgressBar();
+      clearInterval(deliveryStatusTimerID);
+
+    }
+
+  }, 2000);
+
+
 function updateDeliveryProgressBar() {
 
   if(orderToTrack[0].deliveryProgressStage === 0) {
