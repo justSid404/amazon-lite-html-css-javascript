@@ -525,6 +525,26 @@ a:active {
 
 }
 
+@media screen and (max-width: 1600px) and (max-height: 800px) {
+
+.cartItemCount {
+
+  font-size: 12px;
+  top: 0.5vh;
+  right: 3.10vw;
+
+}
+
+.cartItemCountMoreThan9 {
+
+  font-size: 12px;
+  top: 0.5vh;
+  right: 2.9vw;
+
+}
+  
+}
+
 @media screen and (max-width: 1366px) and (max-height: 641px) {
 
   .css-product-listing {
@@ -677,25 +697,5 @@ a:active {
     cursor: pointer;
   
   }
-  
-}
-
-@media screen and (max-width: 1600px) and (max-height: 800px) {
-
-.cartItemCount {
-
-  font-size: 12px;
-  top: 0.5vh;
-  right: 3.10vw;
-
-}
-
-.cartItemCountMoreThan9 {
-
-  font-size: 12px;
-  top: 0.5vh;
-  right: 2.9vw;
-
-}
   
 }
