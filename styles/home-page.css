@@ -283,8 +283,8 @@ a:active {
 }
 
 .product-name {
-  
-  min-height: 5.92vh;
+    
+  min-height: 59px;
 
   /* margin: 0px 0px 8px 0px;
   
@@ -666,7 +666,7 @@ a:active {
 
   .product-name {
     
-    min-height: 7.27vh;
+    min-height: 59px;
   
     /* margin: 0px 0px 8px 0px;
     
