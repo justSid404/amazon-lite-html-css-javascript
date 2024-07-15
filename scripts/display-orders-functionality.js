@@ -20,32 +20,7 @@ function addProductHTML_OrderPage() {
 
       <div class="css-order-details">
 
-        <div class="css-order-info">
-
-          <div class="order-placed-date">
-
-            <p>Order Placed:</p>
-            NA
-
-          </div>
-
-          <div class="order-total">
-
-            <p>Total:</p>
-            NA
-
-          </div>
-
-          <div class="order-id">
-
-            <p>Order ID:</p>
-            NA
-
-          </div>
-
-        </div>
-
-        <div class="css-order-list">
+        <div class="css-order-list" style="border: solid 1px rgb(206, 206, 206); border-radius: 8px 8px 8px 8px; margin: 0px 0px 4.86vh 0px;">
 
           <div class="no-orders-yet">
 
