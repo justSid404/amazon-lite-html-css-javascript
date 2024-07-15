@@ -12,7 +12,7 @@ console.log(orderToTrack);
 
 document.querySelector('.css-tracking-section').innerHTML = `
 
-      <a class = 'view-all-orders' href="home-page.html">View all orders</a>
+      <a class = 'view-all-orders' href="orders-page.html">View all orders</a>
 
       <p class = "delivery-date">Delivered on ${orderToTrack[0].deliveryDate}</p>
       <p class = "delivery-product-name">${orderToTrack[0].name}</p>
