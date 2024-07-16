@@ -1,4 +1,14 @@
-showResult_HomePage(products);
+if(JSON.parse(localStorage.getItem('searchResultLS')).length > 0) {
+  
+  searchResult = JSON.parse(localStorage.getItem('searchResultLS'));
+  showResult_HomePage(searchResult);
+  localStorage.removeItem('searchResultLS');
+
+} else {
+
+  showResult_HomePage(products);
+
+}
     
 console.log(cart);
 

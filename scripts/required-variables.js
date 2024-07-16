@@ -383,6 +383,7 @@ let products = [
 let cart = [];
 let placedOrders = [];
 let orderToTrack = [];
+let searchResult = [];
 let timeoutID;
 let deliveryStatusTimerID;
 
@@ -541,6 +542,16 @@ function formatDate(dateToFormat, weekdayOption, monthOption, dayOption) {
 
 }
 
-// let dateToFormat = updateDate("2024-07-09", "+", "days", 3);
-// console.log(dateToFormat);
-// console.log(formatDate(dateToFormat, "long", "long", "numeric"));
+document.addEventListener('keydown', (event) => {
+
+  if(event.key === 'r') {
+
+    cart = [];
+    placedOrders = [];
+    localStorage.removeItem('cartLS');
+    localStorage.removeItem('placedOrdersLS');
+    localStorage.removeItem('searchResultLS');
+
+  }
+
+});

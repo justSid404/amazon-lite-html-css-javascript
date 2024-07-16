@@ -12,32 +12,49 @@ searchBoxElement.addEventListener('keydown', (event) => {
 
   if(event.key === 'Enter') {
 
-    // window.location.href = 'home-page.html';
-    productListingElement.innerHTML = '';
-    searchButtonAction(products);
+    if(window.location.href.includes('home-page')) {
+
+      productListingElement.innerHTML = '';
+      searchButtonAction(products);
+  
+    } else {
+  
+      searchButtonAction(products);
+      window.location.href = 'home-page.html';
+  
+    }
   }
   
 });
 
 searchButtonElement.addEventListener('click', () => {
 
-  // window.location.href = 'home-page.html';
-  productListingElement.innerHTML = '';
-  searchButtonAction(products);
+  if(window.location.href.includes('home-page')) {
+
+    productListingElement.innerHTML = '';
+    searchButtonAction(products);
+
+  } else {
+
+    searchButtonAction(products);
+    window.location.href = 'home-page.html';
+
+  }
+
 });
 
-amazonLogo.addEventListener('click', () => {
+// amazonLogo.addEventListener('click', () => {
 
-  cart = [];
-  placedOrders = [];
-  localStorage.removeItem('cartLS');
-  localStorage.removeItem('placedOrdersLS');
+//   cart = [];
+//   placedOrders = [];
+//   localStorage.removeItem('cartLS');
+//   localStorage.removeItem('placedOrdersLS');
   
-});
+// });
 
 function searchButtonAction(searchData) {
 
-  let searchResult = [];
+  searchResult = [];
   let searchKeyword = searchBoxElement.value;
 
   searchData.forEach((value) => {
@@ -49,7 +66,18 @@ function searchButtonAction(searchData) {
   });
 
   // searchBoxElement.value = searchKeyword;
+  if(window.location.href.includes('home-page')) {
 
-  showResult_HomePage(searchResult);
+    showResult_HomePage(searchResult);
+    searchResult = [];
+    localStorage.removeItem('searchResultLS');
+
+  } else {
+
+    window.location.href = 'home-page.html';
+
+  }
+
+  localStorage.setItem('searchResultLS', JSON.stringify(searchResult));
 
 }
