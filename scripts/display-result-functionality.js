@@ -1,8 +1,16 @@
-if(JSON.parse(localStorage.getItem('searchResultLS')).length > 0) {
+if(localStorage.getItem('searchResultLS')) {
   
-  searchResult = JSON.parse(localStorage.getItem('searchResultLS'));
-  showResult_HomePage(searchResult);
-  localStorage.removeItem('searchResultLS');
+  if(JSON.parse(localStorage.getItem('searchResultLS')).length > 0) {
+  
+    searchResult = JSON.parse(localStorage.getItem('searchResultLS'));
+    showResult_HomePage(searchResult);
+    localStorage.removeItem('searchResultLS');
+  
+  } else {
+  
+    showResult_HomePage(products);
+  
+  }
 
 } else {
 
