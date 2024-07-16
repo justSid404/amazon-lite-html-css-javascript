@@ -312,7 +312,17 @@ function addProductHTML_CheckoutPage() {
 
         document.querySelector(`.cheakout-product-${cartIndex}-quantity-save`).addEventListener('click', () => {
 
-          cart[cartIndex].quantity = document.querySelector(`.cheakout-product-${cartIndex}-quantity-input`).value;
+          if(document.querySelector(`.cheakout-product-${cartIndex}-quantity-input`).value * 1 > 0) {
+
+            cart[cartIndex].quantity = document.querySelector(`.cheakout-product-${cartIndex}-quantity-input`).value * 1;
+            
+          } else {
+
+            document.querySelector(`.cheakout-product-${cartIndex}-quantity-input`).value = 1;
+            cart[cartIndex].quantity = 1;
+
+          }
+          
           localStorage.setItem('cartLS', JSON.stringify(cart));
           addProductHTML_CheckoutPage();
           updateSummary();
