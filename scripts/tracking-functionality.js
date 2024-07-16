@@ -38,6 +38,11 @@ document.querySelector('.css-tracking-section').innerHTML = `
 
       </div>`;
 
+window.onload = () => {
+
+  updateDeliveryProgressBar();
+
+};
 
 function updateDeliveryProgressBar() {
 
